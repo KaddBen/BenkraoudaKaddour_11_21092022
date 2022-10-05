@@ -1,0 +1,13 @@
+.location_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .location_section {
+    display: flex;
+    flex-direction: column;
+  }
+}

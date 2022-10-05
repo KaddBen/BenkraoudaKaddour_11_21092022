@@ -1,0 +1,10 @@
+.stars {
+  font-size: 2rem;
+  color: #ff6060;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .stars {
+    font-size: 1rem;
+  }
+}

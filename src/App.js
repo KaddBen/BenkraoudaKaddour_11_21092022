@@ -1,16 +1,21 @@
 
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './Home.js'
-import About from './About.js'
-import Location from './Location.js'
-import SharedLayout from './SharedLayout.js'
-import Error from './Error.js'
+import Home from './pages/Home/Home.js'
+import About from './pages/About/About.js'
+import Location from './pages/Location/Location.js'
+import SharedLayout from './pages/SharedLayout/SharedLayout.js'
+import Error from './pages/Error/Error.js'
 import logo from './img/LOGO.png';
 import 'typeface-montserrat';
 
 
-import './App.css';
+import './style/App.css';
+import './pages/Home/Home.css';
+import './pages/About/About.css'
+import './pages/Location/Location.css'
+import './pages/SharedLayout/SharedLayout.css'
+import './pages/Error/Error.css'
 
 function App() {
   return (

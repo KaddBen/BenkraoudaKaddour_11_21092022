@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  justify-content: right;
+  font-size: 2rem;
+  font-weight: 500;
+  gap: 3rem;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.menu {
+  gap: 1rem;
+  margin-top: 2rem;
+}

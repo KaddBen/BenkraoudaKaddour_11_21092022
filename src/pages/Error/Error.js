@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './img/landscape.png';
+
 import { Link } from "react-router-dom"
-import housings from "./logements.json"
-import Navbar from './Navbar.js'
+import housings from "../../logements.json"
+import Navbar from '../../components/Navbar/Navbar'
 const Error = () => {
     return (
         <div className='error_container'>

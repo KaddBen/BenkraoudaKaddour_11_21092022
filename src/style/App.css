@@ -1,0 +1,121 @@
+html {
+  min-width: 1280px;
+}
+body {
+  margin: 5% 5% 0% 5%;
+  font-family: Montserrat;
+}
+a {
+  text-decoration: none;
+  color: #ff6060;
+}
+h2 {
+  margin: unset;
+}
+p {
+  font-size: 2.5rem;
+  color: #ff6060;
+  font-weight: 350;
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 3%;
+  height: 4rem;
+  width: 85%;
+  background-color: #ff6060;
+  border-radius: 0.5rem;
+  border: none;
+}
+button:active {
+  border-style: outset;
+  border: none;
+}
+
+button span {
+  font-size: 2rem;
+  color: #ffff;
+}
+
+li {
+  font-size: 2.5rem;
+  color: #ff6060;
+  font-weight: 350;
+}
+
+ul {
+  list-style-type: none;
+}
+article {
+  position: relative;
+}
+article img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+article span {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  color: #ffff;
+  font-weight: 500;
+  width: 60%;
+  font-size: 1.5rem;
+}
+
+.logo {
+  position: absolute;
+  left: 10%;
+  top: 7%;
+}
+
+.grey {
+  color: rgb(190, 186, 186);
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  html {
+    min-width: unset;
+  }
+
+  navbar {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: 12px;
+  }
+  ul {
+    padding: 0.5rem;
+  }
+  li {
+    font-size: 12px;
+  }
+
+  .container {
+    margin-top: 1rem;
+  }
+
+  .logo {
+    top: 2%;
+    left: 5%;
+    width: 40%;
+  }
+
+  article span {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
