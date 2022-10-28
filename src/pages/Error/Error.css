@@ -17,7 +17,7 @@
 .back_home a {
   text-decoration: underline;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1090px) {
   .error_msg {
     font-size: 18px;
   }

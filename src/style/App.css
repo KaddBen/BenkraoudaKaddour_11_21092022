@@ -1,6 +1,4 @@
-html {
-  min-width: 1280px;
-}
+
 body {
   margin: 5% 5% 0% 5%;
   font-family: Montserrat;
@@ -82,11 +80,13 @@ article span {
   visibility: visible;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1090px) {
   html {
     min-width: unset;
   }
-
+.container {
+  flex-direction: column !important;
+}
   navbar {
     font-size: 1rem;
   }
@@ -109,6 +109,7 @@ article span {
     top: 2%;
     left: 5%;
     width: 40%;
+    max-width: 227px;
   }
 
   article span {
@@ -118,4 +119,24 @@ article span {
   p {
     font-size: 12px;
   }
+}
+
+@media screen and (min-width: 1090px) and (max-width: 1260px) {
+article span {
+  font-size: 1.2rem;
+}
+
+.landscape div {
+  font-size: 3rem;
+}
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+.tag { 
+width: 30%;
+font-size: 12px;
+height: fit-content;
+border-radius: 0.5rem;
+padding-bottom: 0.3rem;
+}
+
 }
