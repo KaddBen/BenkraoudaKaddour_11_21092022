@@ -4,12 +4,14 @@ import  './Article.css';
 
 const Article = ({id, cover, title}) => {
     return (
-<article key={id} className="location"> 
         <Link to={`/${id}`}> 
-        <img src={cover}></img> 
-        </Link> 
+<article key={id} className="location"> 
+      
+        <img src={cover} alt={title}></img> 
+        
         <span>{title}</span>        
         </article>
+        </Link> 
     )
 }
 

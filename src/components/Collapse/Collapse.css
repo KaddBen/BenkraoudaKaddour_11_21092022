@@ -8,6 +8,9 @@
   font-size: 6rem;
   color: #ffff;
 }
+.arrow_left:hover {
+  cursor: pointer;
+}
 .arrow_right {
   position: absolute;
   right: 0;
@@ -15,25 +18,21 @@
   font-size: 6rem;
   color: #ffff;
 }
+.arrow_right:hover {
+  cursor: pointer;
+}
 
 @media screen and (min-width: 320px) and (max-width: 1090px) {
   .ReactCollapse--collapse {
     width: 100%;
   }
   .arrow_left {
-    font-size: 3rem;
-    top: 50%;
+    font-size: 40px;
+    top: 90%;
   }
+ 
   .arrow_right {
-    font-size: 3rem;
-    top: 50%;
-  }
-  .arrow_left {
-    font-size: 20px;
-    top: 50%;
-  }
-  .arrow_right {
-    font-size: 20px;
-    top: 50%;
+    font-size: 40px;
+    top: 90%;
   }
 }

@@ -1,33 +1,34 @@
 import React from "react";
-import  './StarsRating.css';
+import "./StarsRating.css";
 
-const  StarRating = ({count, value,  inactiveColor='#ddd',size=24, activeColor='#f00', onChange}) => {
- 
-     // short trick 
-     const stars = Array.from({length: count}, () => '🟊')
-    
-     // Internal handle change function
-     const handleChange = (value) => {
-       onChange(value + 1);
-     }
-   
-    return (
-        
-        <div>
+const StarRating = ({
+  count,
+  value,
+  inactiveColor = "#ddd",
+  size = 24,
+  activeColor = "#f00",
+}) => {
+  const stars = Array.from({ length: count }, () => "🟊");
+
+  return (
+    <div>
       {stars.map((s, index) => {
         let style = inactiveColor;
         if (index < value) {
-          style=activeColor;
+          style = activeColor;
         }
         return (
-          <span className={"star"}  
+          <span
+            className={"star"}
             key={index}
-            style={{color: style, width:size, height:size, fontSize: size}}
-            onClick={()=>handleChange(index)}>{s}</span>
-        )
+            style={{ color: style, width: size, height: size, fontSize: size }}
+          >
+            {s}
+          </span>
+        );
       })}
     </div>
+  );
+};
 
-        )
-    }
-export default StarRating
+export default StarRating;

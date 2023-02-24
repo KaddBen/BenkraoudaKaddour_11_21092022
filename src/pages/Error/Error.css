@@ -1,12 +1,12 @@
 .error {
   text-align: center;
-  font-size: 20rem;
+  font-size: 15rem;
   color: #ff6060;
   margin-top: 10%;
 }
 .error_msg {
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #ff6060;
 }
 .back_home {

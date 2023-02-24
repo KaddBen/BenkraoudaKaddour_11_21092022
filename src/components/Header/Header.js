@@ -1,22 +1,66 @@
-import React from 'react';
-import { MdArrowBackIosNew }  from 'react-icons/md';
-import { IoIosArrowForward }  from 'react-icons/io';
-import  './Header.css';
+import React from "react";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
+import { useState, useEffect } from "react";
+import "./Header.css";
+/* 
+Component made to display all the images from all the different pages at the header position.
+Because so,the number of props might be a little bit confusing.Here's an explanation down below.
 
-const Header = ({classdiv, classimg, classArrowLeft,classArrowRight, img, content, count,functionarrowLeft,functionArrowRight, array}) => {
-   if(array === 1) {
-    classArrowLeft = "hidden";
-    classArrowRight = "hidden";
-   }
-   return (
-< div className={classdiv}>
-<img src={img} className={classimg}></img>
-<div>{content}</div>  
-<IoIosArrowForward className= {classArrowLeft} onClick= {functionarrowLeft} />
-      <MdArrowBackIosNew className= {classArrowRight} onClick= {functionArrowRight} />
-      <span>{count}/{array} </span> 
-</div>
-    )
-}
+bgImg: prop used to display the background image of the home and about page.
+img: prop used to display the specific image of the location page
+content: if specified,add a message in the middle of the header (used in the home page)
+The four last props are used for the system of incrementation in order to display the location
+images properly
+*/
+const Header = ({
+  bgImg,
+  img,
+  content,
+  count,
+  functionarrowLeft,
+  functionArrowRight,
+  array,
+}) => {
+  const [classArrowLeft, setClassArrowLeft] = useState("");
+  const [classArrowRight, setClassArrowRight] = useState("");
+  useEffect(() => {
+    setClassArrowLeft("arrow_left");
+    setClassArrowRight("arrow_right");
+    if (bgImg === "landscape_home" || (bgImg === "landscape_about" && !img)) {
+      setClassArrowLeft("hidden");
+      setClassArrowRight("hidden");
+    }
+    if (array === 1) {
+      setClassArrowLeft("hidden");
+      setClassArrowRight("hidden");
+    }
+  }, [array]);
+  let toggleClass;
+  let locationImg;
+  array > 1 ? (toggleClass = "visible") : (toggleClass = "hidden");
+  array
+    ? (locationImg = <img src={img} className="location_img" alt=""></img>)
+    : (locationImg = "");
+  return (
+    <div className={`landscape ${bgImg}`}>
+      {locationImg}
+      <div>{content}</div>
 
-export default Header
+      <IoIosArrowForward
+        className={classArrowRight}
+        onClick={functionarrowLeft}
+      />
+
+      <MdArrowBackIosNew
+        className={classArrowLeft}
+        onClick={functionArrowRight}
+      />
+      <span className={toggleClass}>
+        {count}/{array}
+      </span>
+    </div>
+  );
+};
+
+export default Header;

@@ -3,7 +3,6 @@
   margin-top: 10rem;
   height: 30rem;
 }
-
 .background_location span {
   position: absolute;
   bottom: 10%;
@@ -11,7 +10,6 @@
   color: #ffff;
   font-size: 1.5rem;
 }
-
 .background_location img {
   width: 100%;
   height: 30rem;
@@ -19,7 +17,6 @@
 
   border-radius: 1rem;
 }
-
 .location_container {
   display: flex;
   flex-direction: column;
@@ -30,18 +27,17 @@
   font-size: 1.5rem;
   color: #ff6060;
 }
-
 .location_title {
   font-size: 4rem;
   color: #ff6060;
 }
-
 .tag_container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  width: 100%;
+  min-width: 20rem;
 }
-
 .tag {
   text-align: center;
   background-color: #ff6060;
@@ -52,7 +48,6 @@
   font-size: 1.3rem;
   padding-top: 0.4rem;
 }
-
 @media screen and (min-width: 320px) and (max-width: 1090px) {
   .location_title {
     width: 80%;
@@ -72,7 +67,6 @@
   .background_location img {
     height: 255px;
   }
-
   .logo_background {
     width: 100% !important;
     height: 15rem;
@@ -93,6 +87,18 @@
     width: 8rem;
     font-size: 1rem;
     height: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 1.3rem !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .tag {
+    width: 30%;
+    font-size: 12px;
+    height: fit-content;
+    border-radius: 0.5rem;
+    padding-bottom: 0.3rem;
+  }
+  .item_menu {
+    gap: 1rem;
   }
 }
