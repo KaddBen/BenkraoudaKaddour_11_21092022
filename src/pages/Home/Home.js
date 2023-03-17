@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home_container">
       <Header
         bgImg="landscape_home"
         classimg="logo_background"

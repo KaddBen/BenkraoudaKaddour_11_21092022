@@ -2,19 +2,19 @@ import React from "react";
 import "./StarsRating.css";
 
 const StarRating = ({
-  count,
-  value,
+  maxStars,
+  activeStars,
   inactiveColor = "#ddd",
   size = 24,
   activeColor = "#f00",
 }) => {
-  const stars = Array.from({ length: count }, () => "🟊");
+  const stars = Array.from({ length: maxStars }, () => "🟊");
 
   return (
     <div>
       {stars.map((s, index) => {
         let style = inactiveColor;
-        if (index < value) {
+        if (index < activeStars) {
           style = activeColor;
         }
         return (

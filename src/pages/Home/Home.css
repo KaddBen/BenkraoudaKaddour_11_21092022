@@ -1,9 +1,18 @@
-body > *:not(.footer) {
-  margin: 4.3% 5% 0% 5%;
-  font-family: Montserrat;
+body  {
+ font-family: Montserrat;
+ margin: unset;
+ min-height: 100% !important;
+}
+html{
+  min-height: 100% !important;
+margin-bottom: 0% !important;
 }
 img {
   border: none;
+}
+
+.home_container {
+  padding: 0% 5%;
 }
 .location_section {
   display: grid;

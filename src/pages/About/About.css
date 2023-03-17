@@ -1,3 +1,6 @@
+.about_container {
+  padding: 0% 5%;
+}
 .list_container {
   display: flex;
   flex-direction: column;

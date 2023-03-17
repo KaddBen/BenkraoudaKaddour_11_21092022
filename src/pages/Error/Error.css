@@ -17,13 +17,20 @@
 .back_home a {
   text-decoration: underline;
 }
-@media screen and (min-width: 320px) and (max-width: 1090px) {
+
+@media screen and (min-width: 320px) and (max-width: 570px) {
+  .error {
+    font-size: 96px !important;
+    margin-top: 60%;
+  }
+}
+@media screen and (min-width: 571px) and (max-width: 1090px) {
+  .error {
+    font-size: 96px !important;
+    margin-top: 30%;
+  }
   .error_msg {
     font-size: 18px;
-  }
-  .error {
-    font-size: 96px;
-    margin-top: 60%;
   }
   .back_home {
     margin-top: 30% !important;

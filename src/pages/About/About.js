@@ -9,7 +9,7 @@ const About = () => {
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
   return (
-    <div>
+    <div className="about_container">
       <Header
        bgImg="landscape_about"
         classArrowLeft="hidden"

@@ -15,7 +15,7 @@ images properly
 */
 const Header = ({
   bgImg,
-  img,
+  imgLocation,
   content,
   count,
   functionarrowLeft,
@@ -24,10 +24,12 @@ const Header = ({
 }) => {
   const [classArrowLeft, setClassArrowLeft] = useState("");
   const [classArrowRight, setClassArrowRight] = useState("");
+  var toggleClass;
+  var locationImg;
   useEffect(() => {
     setClassArrowLeft("arrow_left");
     setClassArrowRight("arrow_right");
-    if (bgImg === "landscape_home" || (bgImg === "landscape_about" && !img)) {
+    if (bgImg === "landscape_home" || (bgImg === "landscape_about" && !imgLocation)) {
       setClassArrowLeft("hidden");
       setClassArrowRight("hidden");
     }
@@ -35,13 +37,15 @@ const Header = ({
       setClassArrowLeft("hidden");
       setClassArrowRight("hidden");
     }
+   
   }, [array]);
-  let toggleClass;
-  let locationImg;
+
+
   array > 1 ? (toggleClass = "visible") : (toggleClass = "hidden");
   array
-    ? (locationImg = <img src={img} className="location_img" alt=""></img>)
-    : (locationImg = "");
+
+  ? (locationImg = <img src={imgLocation} className="location_img" alt=""></img>)
+  : (locationImg = "");
   return (
     <div className={`landscape ${bgImg}`}>
       {locationImg}

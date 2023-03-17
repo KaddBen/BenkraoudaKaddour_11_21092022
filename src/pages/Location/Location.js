@@ -11,8 +11,8 @@ import UserInfo from "../../components/UserInfo/UserInfo";
 const Location = () => {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(1);
+  let [count1, setCount1] = useState(0);
+  let [count2, setCount2] = useState(1);
 
   const { locationId } = useParams();
   const housing = housings.find((housing) => housing.id === locationId);
@@ -39,18 +39,18 @@ const Location = () => {
     };
 
     const increase = () => {
-      setCount1(count1 - 1);
-      setCount2(count2 - 1);
+      setCount1(count1 - 1);//count1 - 1
+      setCount2(count2 - 1);//count2 - 1
       if (count1 === 0) {
         setCount1(count1 + (pictures.length - 1));
         setCount2(count2 + (pictures.length - 1));
       }
     };
     return (
-      <div>
+      <div className="location_page">
         <Header
           bgImg="landscape_about"
-          img={pictures[count1]}
+          imgLocation={pictures[count1]}
           classArrowLeft="arrow_right"
           classArrowRight="arrow_left"
           array={pictures.length}
