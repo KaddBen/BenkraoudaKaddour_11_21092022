@@ -39,8 +39,8 @@ const Location = () => {
     };
 
     const increase = () => {
-      setCount1(count1 - 1);//count1 - 1
-      setCount2(count2 - 1);//count2 - 1
+      setCount1(count1 - 1);
+      setCount2(count2 - 1);
       if (count1 === 0) {
         setCount1(count1 + (pictures.length - 1));
         setCount2(count2 + (pictures.length - 1));
