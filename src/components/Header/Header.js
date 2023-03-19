@@ -24,8 +24,7 @@ const Header = ({
 }) => {
   const [classArrowLeft, setClassArrowLeft] = useState("");
   const [classArrowRight, setClassArrowRight] = useState("");
-  var toggleClass;
-  var locationImg;
+ 
   useEffect(() => {
     setClassArrowLeft("arrow_left");
     setClassArrowRight("arrow_right");
@@ -38,8 +37,9 @@ const Header = ({
       setClassArrowRight("hidden");
     }
    
-  }, [array]);
-
+  }, [bgImg, imgLocation, array] );
+  let toggleClass;
+  let locationImg;
 
   array > 1 ? (toggleClass = "visible") : (toggleClass = "hidden");
   array

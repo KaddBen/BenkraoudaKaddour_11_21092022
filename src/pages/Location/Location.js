@@ -22,12 +22,16 @@ const Location = () => {
     const { name, picture } = host;
     const tags = housing.tags;
     const tagMap = tags.map((tag) => {
-      return <div className="tag">{tag}</div>;
+      return (
+        <div className="tag" key={tag}>
+          {tag}
+        </div>
+      );
     });
     const pictures = housing.pictures;
     const equipments = housing.equipments;
     const equipmentsMap = equipments.map((equipment) => {
-      return <li>{equipment}</li>;
+      return <li key={equipment}>{equipment}</li>;
     });
     const decrease = () => {
       setCount1(count1 + 1);

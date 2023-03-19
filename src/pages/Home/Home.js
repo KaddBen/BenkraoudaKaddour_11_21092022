@@ -21,6 +21,7 @@ const Home = () => {
               id={housing.id}
               cover={housing.cover}
               title={housing.title}
+              key={housing.id}
             />
           );
         })}

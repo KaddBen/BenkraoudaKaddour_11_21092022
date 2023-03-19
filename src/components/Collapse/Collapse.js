@@ -6,9 +6,9 @@ import  './Collapse.css';
 const Collapses = ({ title, description, state }) => {  
     return (
         <Collapse  isOpened= {state}>
-        <p id ={title}>
+        <div id ={title} className='collapses_span'>
        {description}
-        </p> 
+        </div> 
         </Collapse>
     )
 }
