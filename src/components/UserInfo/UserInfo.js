@@ -11,9 +11,8 @@ const UserInfo = ({ name, picture, rating }) => {
       </div>
       <div className="rating_container">
         <StarRating
-          count={5}
-          size={40}
-          value={rating}
+          maxStars={5}
+          activeStars={rating}
           activeColor={"#FF6060"}
           inactiveColor={"#ddd"}
           onChange

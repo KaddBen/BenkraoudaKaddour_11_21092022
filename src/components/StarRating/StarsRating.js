@@ -5,7 +5,7 @@ const StarRating = ({
   maxStars,
   activeStars,
   inactiveColor = "#ddd",
-  size = 24,
+  size = 64,
   activeColor = "#f00",
 }) => {
   const stars = Array.from({ length: maxStars }, () => "🟊");
