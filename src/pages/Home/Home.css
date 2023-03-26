@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 body  {
- font-family: Montserrat;
+font-family: 'Montserrat', sans-serif ; 
+font-weight: 500;
  margin: unset;
  min-height: 100% !important;
+ z-index: 3;
 }
 html{
   min-height: 100% !important;
@@ -62,6 +65,7 @@ li {
 }
 ul {
   list-style-type: none;
+  margin: unset;
 }
 .grey {
   color: rgb(190, 186, 186);

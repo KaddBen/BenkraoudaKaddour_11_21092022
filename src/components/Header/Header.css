@@ -1,10 +1,11 @@
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important;
+  z-index: -1000 !important;
 }
 .landscape {
   display: flex;
   justify-content: center;
-  position: relative;
+  position: relative !important;
   margin-top: 10rem;
   width: 100% ;
   min-height: 17rem;
@@ -21,6 +22,7 @@
   border-radius: 2rem;
   object-fit: cover;
   border: none;
+  width: 100%;
 }
 .landscape span {
   position: absolute;
@@ -32,12 +34,14 @@
 }
 .landscape_home {
   background-image: url("../../assets/landscape.png");
+  width: 100% !important;
 }
 .landscape_about {
   background-image: url("../../assets/landscape_about.png");
+  width: 100% !important;
 }
-.landscape img {
-  width: 100%;
+.landscape img:not(.arrow_left, .arrow_right, .location_img) {
+ 
 }
 .landscape div {
   position: absolute;
@@ -73,7 +77,6 @@
     visibility: hidden;
   }
   .landscape img {
-    width: 1400% !important;
     height: 10rem;
     border-radius: 1.1rem;
   }
@@ -81,6 +84,12 @@
     object-fit: FILL;
     height: 220px !important;
     background-size: 50%;
+  }
+  .arrow_right {
+    visibility: hidden;
+  }
+  .arrow_left {
+    visibility: hidden;
   }
 }
 @media screen and (min-width: 1090px) and (max-width: 1260px) {

@@ -5,7 +5,6 @@ import About from "./pages/About/About.js";
 import Location from "./pages/Location/Location.js";
 import SharedLayout from "./pages/SharedLayout/SharedLayout.js";
 import Error from "./pages/Error/Error.js";
-import "typeface-montserrat";
 import "./pages/Home/Home.css";
 import "./pages/About/About.css";
 import "./pages/Location/Location.css";
